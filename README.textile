@@ -6,6 +6,7 @@ The origion url:
 https://github.com/zaharije/hbase-gui-admin
 
 update by xinqiyang:
+add feature:save the last cluster zookeeper set.
 add the row info view
 fix charector show,default set utf-8,so will show all of the string.
 add a table row count.
