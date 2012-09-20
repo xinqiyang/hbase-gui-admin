@@ -5,13 +5,19 @@ HBaseXplorer is java desktop application for managing and exploring HBase databa
 The origion url:
 https://github.com/zaharije/hbase-gui-admin
 
+update by xinqiyang:
+add the row info view
+fix charector show,default set utf-8,so will show all of the string.
+add a table row count.
+
+
 h2. Licnese
 
 MIT License (see "LICENSE":http://github.com/zaharije/HBaseXplorer/blob/master/LICENSE)
 
 h2. Install
 
-- Get "current release":https://github.com/zaharije/hbase-gui-admin/downloads
+- Get "current release":https://github.com/xinqiyang/hbase-gui-admin/downloads
 - Unpack to any folder
 - Execute jar "java -jar bin/HBaseXPlorer.jar" (or if system supports - double click jar file)
 
@@ -23,7 +29,6 @@ h2. Features
 * Can preview any size tables
 * Create,Read,Update,Delete of columns (Only String represented data)
 * Filter rows 
-* Run query:create/drop/enable/disable table
 
 
 h2. Build
