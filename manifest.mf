@@ -1,3 +1,18 @@
 Manifest-Version: 1.0
+Ant-Version: Apache Ant 1.8.3
+Created-By: 1.7.0_04-b21 (Oracle Corporation)
+Class-Path: lib/appframework-1.0.3.jar lib/swing-worker-1.1.jar lib/sw
+ ing-layout-1.0.4.jar lib/beansbinding-1.2.1.jar lib/AgileJSON-2009-03
+ -30.jar lib/appframework-1.0.3.jar lib/commons-cli-2.0-SNAPSHOT.jar l
+ ib/commons-el-from-jetty-5.1.4.jar lib/commons-httpclient-3.0.1.jar l
+ ib/commons-logging-1.0.4.jar lib/commons-logging-api-1.0.4.jar lib/co
+ mmons-math-1.1.jar lib/hadoop-0.20.1-hdfs127-core.jar lib/hadoop-0.20
+ .1-test.jar lib/hbase-0.20.3-test.jar lib/hbase-0.20.3.jar lib/jasper
+ -compiler-5.5.12.jar lib/jasper-runtime-5.5.12.jar lib/jetty-6.1.14.j
+ ar lib/jetty-util-6.1.14.jar lib/jruby-complete-1.2.0.jar lib/json.ja
+ r lib/junit-3.8.1.jar lib/libthrift-r771587.jar lib/log4j-1.2.15.jar 
+ lib/lucene-core-3.0.0.jar lib/servlet-api-2.5-6.1.14.jar lib/swing-la
+ yout-1.0.4.jar lib/swing-worker-1.1.jar lib/xmlenc-0.52.jar lib/zooke
+ eper-3.2.2.jar
 X-COMMENT: Main-Class will be added automatically by build
-
+Main-Class: org.hbaseexplorer.HBaseExplorerApp

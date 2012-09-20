@@ -2,24 +2,31 @@ h1. HBaseXplorer
 
 HBaseXplorer is java desktop application for managing and exploring HBase database.
 
+The origion url:
+https://github.com/zaharije/hbase-gui-admin
+
 h2. Licnese
 
 MIT License (see "LICENSE":http://github.com/zaharije/HBaseXplorer/blob/master/LICENSE)
 
 h2. Install
 
-- Get "current release":http://github.com/zaharije/HBaseXplorer/downloads
+- Get "current release":https://github.com/zaharije/hbase-gui-admin/downloads
 - Unpack to any folder
 - Execute jar "java -jar bin/HBaseXPlorer.jar" (or if system supports - double click jar file)
 
+
 h2. Features
 
-* Multiple HBase connections
-* Single row preview
+* Multiple HBase connections,remember last connection
+* Single/Multi row preview
 * Can preview any size tables
 * Create,Read,Update,Delete of columns (Only String represented data)
 * Filter rows 
+* Run query:create/drop/enable/disable table
+
 
 h2. Build
+Use Netbeans 7.0 to build project
 
-Use Netbeans 6.8 to build project
+

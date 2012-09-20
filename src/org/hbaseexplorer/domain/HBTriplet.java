@@ -1,5 +1,9 @@
 package org.hbaseexplorer.domain;
 
+import java.io.UnsupportedEncodingException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
+
 /**
  *
  * @author zaharije
@@ -24,7 +28,7 @@ public class HBTriplet {
         return qualifier;
     }
 
-    public String getQualifierString() {
+    public String getQualifierString() throws UnsupportedEncodingException {
         return byte2String(qualifier);
     }
 
@@ -36,7 +40,7 @@ public class HBTriplet {
         return value;
     }
 
-    public String getValueString() {
+    public String getValueString() throws UnsupportedEncodingException {
         return byte2String(value);
     }
 
@@ -48,7 +52,7 @@ public class HBTriplet {
         return family;
     }
 
-    public String getFamilyString() {
+    public String getFamilyString() throws UnsupportedEncodingException {
         return byte2String(family);
     }
 
@@ -56,8 +60,8 @@ public class HBTriplet {
         this.family = family;
     }
 
-    public static String byte2String(byte[] data) {
-        return new String(data);
+    public static String byte2String(byte[] data) throws UnsupportedEncodingException {
+        return new String(data,"UTF-8");
     }
 
     public boolean isChanged() {
@@ -70,6 +74,11 @@ public class HBTriplet {
 
     @Override
     public String toString() {
-        return getFamilyString() + ":" + getQualifierString() + "=" + getValueString();
+        try {
+            return getFamilyString() + ":" + getQualifierString() + "=" + getValueString();
+        } catch (UnsupportedEncodingException ex) {
+            Logger.getLogger(HBTriplet.class.getName()).log(Level.SEVERE, null, ex);
+            return "";
+        }
     }
 }

@@ -1,9 +1,12 @@
 /*
  * HBaseExplorerView.java
  */
-
 package org.hbaseexplorer;
 
+import java.io.FileNotFoundException;
+import java.io.IOException;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import org.jdesktop.application.Action;
 import org.jdesktop.application.ResourceMap;
 import org.jdesktop.application.SingleFrameApplication;
@@ -16,14 +19,21 @@ import javax.swing.Icon;
 import javax.swing.JDialog;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import javax.swing.JScrollPane;
+import javax.swing.JTextArea;
+
 import org.apache.hadoop.conf.Configuration;
 import org.hbaseexplorer.components.ConnectionTree;
 import org.hbaseexplorer.components.DataTabPane;
+import org.buddy.javatools.BuddyFile;
+import org.hbaseexplorer.domain.Query;
 
 /**
  * The application's main frame.
  */
 public class HBaseExplorerView extends FrameView {
+    
+    private Configuration localconf;
 
     public HBaseExplorerView(SingleFrameApplication app) {
         super(app);
@@ -34,6 +44,7 @@ public class HBaseExplorerView extends FrameView {
         ResourceMap resourceMap = getResourceMap();
         int messageTimeout = resourceMap.getInteger("StatusBar.messageTimeout");
         messageTimer = new Timer(messageTimeout, new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
                 statusMessageLabel.setText("");
             }
@@ -44,6 +55,7 @@ public class HBaseExplorerView extends FrameView {
             busyIcons[i] = resourceMap.getIcon("StatusBar.busyIcons[" + i + "]");
         }
         busyIconTimer = new Timer(busyAnimationRate, new ActionListener() {
+
             public void actionPerformed(ActionEvent e) {
                 busyIconIndex = (busyIconIndex + 1) % busyIcons.length;
                 statusAnimationLabel.setIcon(busyIcons[busyIconIndex]);
@@ -56,6 +68,7 @@ public class HBaseExplorerView extends FrameView {
         // connecting action tasks to status bar via TaskMonitor
         TaskMonitor taskMonitor = new TaskMonitor(getApplication().getContext());
         taskMonitor.addPropertyChangeListener(new java.beans.PropertyChangeListener() {
+
             public void propertyChange(java.beans.PropertyChangeEvent evt) {
                 String propertyName = evt.getPropertyName();
                 if ("started".equals(propertyName)) {
@@ -72,17 +85,39 @@ public class HBaseExplorerView extends FrameView {
                     progressBar.setVisible(false);
                     progressBar.setValue(0);
                 } else if ("message".equals(propertyName)) {
-                    String text = (String)(evt.getNewValue());
+                    String text = (String) (evt.getNewValue());
                     statusMessageLabel.setText((text == null) ? "" : text);
                     messageTimer.restart();
                 } else if ("progress".equals(propertyName)) {
-                    int value = (Integer)(evt.getNewValue());
+                    int value = (Integer) (evt.getNewValue());
                     progressBar.setVisible(true);
                     progressBar.setIndeterminate(false);
                     progressBar.setValue(value);
                 }
             }
         });
+        //TODO:add by xinqiyang
+        //if config.ini exist then load the database
+        try {
+            String config = BuddyFile.get("hbasexplorerconfig.ini");
+            if (config.length() > 0) {
+                //configuration set haven't use 
+                Configuration conf = new Configuration();
+                conf.set("hbase.zookeeper.quorum", config);
+                conf.set("hbase.client.retries.number", "1");
+                this.localconf = conf;
+                //save it to file
+                getTree().createConnection(conf);
+                
+                getTree().setMainApp(this);
+            }
+        } catch (FileNotFoundException ex) {
+            Logger.getLogger(HBaseExplorerView.class.getName()).log(Level.SEVERE, null, ex);
+        } catch (IOException ex) {
+            Logger.getLogger(HBaseExplorerView.class.getName()).log(Level.SEVERE, null, ex);
+        }
+
+
     }
 
     @Action
@@ -111,6 +146,7 @@ public class HBaseExplorerView extends FrameView {
         tabPane = new DataTabPane();
         menuBar = new javax.swing.JMenuBar();
         javax.swing.JMenu fileMenu = new javax.swing.JMenu();
+        jMenuItem2 = new javax.swing.JMenuItem();
         jMenuItem1 = new javax.swing.JMenuItem();
         jSeparator1 = new javax.swing.JPopupMenu.Separator();
         javax.swing.JMenuItem exitMenuItem = new javax.swing.JMenuItem();
@@ -140,14 +176,14 @@ public class HBaseExplorerView extends FrameView {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
             .add(jPanel1Layout.createSequentialGroup()
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 211, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
+                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 457, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(tabPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 473, Short.MAX_VALUE))
+                .add(tabPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 227, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
             .add(tabPane, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
+            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 276, Short.MAX_VALUE)
         );
 
         org.jdesktop.layout.GroupLayout mainPanelLayout = new org.jdesktop.layout.GroupLayout(mainPanel);
@@ -168,6 +204,12 @@ public class HBaseExplorerView extends FrameView {
         fileMenu.setName("fileMenu"); // NOI18N
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(org.hbaseexplorer.HBaseExplorerApp.class).getContext().getActionMap(HBaseExplorerView.class, this);
+        jMenuItem2.setAction(actionMap.get("runQueryAction")); // NOI18N
+        jMenuItem2.setText(resourceMap.getString("jMenuItem2.text")); // NOI18N
+        jMenuItem2.setEnabled(false);
+        jMenuItem2.setName("jMenuItem2"); // NOI18N
+        fileMenu.add(jMenuItem2);
+
         jMenuItem1.setAction(actionMap.get("newConnectionAction")); // NOI18N
         jMenuItem1.setText(resourceMap.getString("jMenuItem1.text")); // NOI18N
         jMenuItem1.setName("jMenuItem1"); // NOI18N
@@ -236,10 +278,10 @@ public class HBaseExplorerView extends FrameView {
 
     @Action
     public void newConnectionAction() {
-        String zookeeper = JOptionPane.showInputDialog("HBase zookeeper", "localhost");
+        String zookeeper = JOptionPane.showInputDialog("HBase zookeeper", "172.17.1.206");
 
         TaskMonitor taskMonitor = new TaskMonitor(getApplication().getContext());
-        
+
 
         if (zookeeper != null && !zookeeper.isEmpty()) {
             Configuration conf = new Configuration();
@@ -247,20 +289,58 @@ public class HBaseExplorerView extends FrameView {
             conf.set("hbase.client.retries.number", "1");
             getTree().createConnection(conf);
             getTree().setMainApp(this);
+            //@TODO:add by xinqiyang
+            //save it to file
+            try {
+                BuddyFile.write("hbasexplorerconfig.ini", zookeeper, false);
+            } catch (IOException ex) {
+                Logger.getLogger(HBaseExplorerView.class.getName()).log(Level.SEVERE, null, ex);
+            }
+
         }
     }
 
     public ConnectionTree getTree() {
-        return (ConnectionTree)conTree;
+        return (ConnectionTree) conTree;
     }
 
     public DataTabPane getTabPane() {
-        return (DataTabPane)tabPane;
+        return (DataTabPane) tabPane;
     }
 
+    @Action
+    public void runQueryAction() throws IOException {
+
+        JTextArea msg = new JTextArea("");
+        msg.setRows(10);
+        msg.setColumns(80);
+        msg.setLineWrap(true);
+        msg.setWrapStyleWord(true);
+
+        JScrollPane scrollPane = new JScrollPane(msg);
+
+        JOptionPane.showConfirmDialog(null, scrollPane);
+        String runQuery = msg.getText();
+
+        if (runQuery.trim() != null && !runQuery.isEmpty() && runQuery.length() > 0) {
+            //run the query
+            
+            Query q = new Query(this.localconf,runQuery);
+            String result = q.runQuery();
+            JOptionPane.showMessageDialog(null, result);
+            //reload tree and data
+           getTree().setMainApp(this);
+
+        } else {
+            JOptionPane.showMessageDialog(null, "please input the query string");
+        }
+
+
+    }
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JTree conTree;
     private javax.swing.JMenuItem jMenuItem1;
+    private javax.swing.JMenuItem jMenuItem2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JScrollPane jScrollPane1;
     private javax.swing.JPopupMenu.Separator jSeparator1;
@@ -272,12 +352,10 @@ public class HBaseExplorerView extends FrameView {
     private javax.swing.JPanel statusPanel;
     private javax.swing.JTabbedPane tabPane;
     // End of variables declaration//GEN-END:variables
-
     private final Timer messageTimer;
     private final Timer busyIconTimer;
     private final Icon idleIcon;
     private final Icon[] busyIcons = new Icon[15];
     private int busyIconIndex = 0;
-
     private JDialog aboutBox;
 }

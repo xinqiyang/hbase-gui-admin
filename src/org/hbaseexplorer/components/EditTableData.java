@@ -12,6 +12,8 @@
 package org.hbaseexplorer.components;
 
 import java.awt.Component;
+import java.awt.event.MouseAdapter;
+import java.awt.event.MouseEvent;
 import java.io.IOException;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
@@ -43,6 +45,9 @@ public class EditTableData extends javax.swing.JPanel {
     private Table table;
     private String rowKey;
     private FilterModel filterModel;
+    private int Total=0;
+    //add row keys
+    //private ArrayList allRowKey;
 
     /** Creates new form EditTableData */
     public EditTableData(Table table) {
@@ -53,8 +58,43 @@ public class EditTableData extends javax.swing.JPanel {
         //tableData.setDefaultRenderer(String.class, new EditTableCellRenderer());
 
         showData(0);
+        
+        //add by xinqiyang
+        //load Rows
+        loadRows(5000);
+        setjListRowListener();
+        jLabel1.setText("   ROWS TATAL:"+String.valueOf(this.Total));
+    }
+    
+    private void loadRows(int num)
+    {
+        EditTableDataModel model = new EditTableDataModel(table, num, "", filterModel);
+        jListRow.setModel(model.getRowData(num));
+        this.Total = model.getRowsTotal();
+        //jLabel1.setText(String.valueOf(model.getRowsTotal()));
+        
+    }
+    
+    
+    private void setjListRowListener()
+    {
+        jListRow.addMouseListener(new MouseAdapter() {
+            @Override
+            public void mouseClicked(MouseEvent evt) {
+                //JList list = (JList)evt.getSource();
+                if (evt.getClickCount() == 1) {          // Double-click
+                    // Get item index
+                    //int index = list.locationToIndex(evt.getPoint());
+                    String itemKey = (String)jListRow.getSelectedValue();
+                    //JOptionPane.showMessageDialog(null,index+"  "+itemKey);
+                    txtFieldRowKey.setText(itemKey);
+                    btnGoClickAction();
+                }
+            }
+        });
     }
 
+    //get row from list
     private void showData(int skip) {
         EditTableDataModel model = new EditTableDataModel(table, skip, rowKey, filterModel);
         autoResizeColWidth(tableData, model);
@@ -65,8 +105,18 @@ public class EditTableData extends javax.swing.JPanel {
         }
 
         rowKey = model.getRowKey();
+        //set the first rowkey
         txtFieldRowKey.setText(rowKey);
+        
+        //get all Row keys.
+        //allRowKey = model.getRowKey();
+        if(skip == 0){
+            
+        }
     }
+    
+    
+    
 
     public EditTableDataModel getTableModel() {
         return (EditTableDataModel)tableData.getModel();
@@ -143,8 +193,12 @@ public class EditTableData extends javax.swing.JPanel {
         btnRemoveRow = new javax.swing.JButton();
         checkBoxFilter = new javax.swing.JCheckBox();
         btnFilter = new javax.swing.JButton();
+        jLabel1 = new javax.swing.JLabel();
+        jSplitPane1 = new javax.swing.JSplitPane();
         jScrollPane1 = new javax.swing.JScrollPane();
         tableData = new javax.swing.JTable();
+        jScrollPane2 = new javax.swing.JScrollPane();
+        jListRow = new javax.swing.JList();
 
         setName("Form"); // NOI18N
 
@@ -196,51 +250,58 @@ public class EditTableData extends javax.swing.JPanel {
         btnAddColumn.setAction(actionMap.get("btnAddColumnClickAction")); // NOI18N
         btnAddColumn.setText(resourceMap.getString("btnAddColumn.text")); // NOI18N
         btnAddColumn.setFocusable(false);
-        btnAddColumn.setHorizontalTextPosition(0);
+        btnAddColumn.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnAddColumn.setName("btnAddColumn"); // NOI18N
-        btnAddColumn.setVerticalTextPosition(3);
+        btnAddColumn.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar2.add(btnAddColumn);
 
         jButton2.setAction(actionMap.get("btnDeleteColumnActionClick")); // NOI18N
         jButton2.setText(resourceMap.getString("jButton2.text")); // NOI18N
         jButton2.setFocusable(false);
-        jButton2.setHorizontalTextPosition(0);
+        jButton2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         jButton2.setName("jButton2"); // NOI18N
-        jButton2.setVerticalTextPosition(3);
+        jButton2.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar2.add(jButton2);
 
         btnAddRow.setText(resourceMap.getString("btnAddRow.text")); // NOI18N
         btnAddRow.setEnabled(false);
         btnAddRow.setFocusable(false);
-        btnAddRow.setHorizontalTextPosition(0);
+        btnAddRow.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnAddRow.setName("btnAddRow"); // NOI18N
-        btnAddRow.setVerticalTextPosition(3);
+        btnAddRow.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar2.add(btnAddRow);
 
         btnRemoveRow.setText(resourceMap.getString("btnRemoveRow.text")); // NOI18N
         btnRemoveRow.setEnabled(false);
         btnRemoveRow.setFocusable(false);
-        btnRemoveRow.setHorizontalTextPosition(0);
+        btnRemoveRow.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnRemoveRow.setName("btnRemoveRow"); // NOI18N
-        btnRemoveRow.setVerticalTextPosition(3);
+        btnRemoveRow.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar2.add(btnRemoveRow);
 
         checkBoxFilter.setAction(actionMap.get("checkBoxFilter")); // NOI18N
         checkBoxFilter.setText(resourceMap.getString("checkBoxFilter.text")); // NOI18N
         checkBoxFilter.setFocusable(false);
-        checkBoxFilter.setHorizontalTextPosition(0);
+        checkBoxFilter.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         checkBoxFilter.setName("checkBoxFilter"); // NOI18N
-        checkBoxFilter.setVerticalTextPosition(3);
+        checkBoxFilter.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar2.add(checkBoxFilter);
 
         btnFilter.setAction(actionMap.get("btnFilterClickAction")); // NOI18N
         btnFilter.setText(resourceMap.getString("btnFilter.text")); // NOI18N
-        btnFilter.setEnabled(false);
         btnFilter.setFocusable(false);
-        btnFilter.setHorizontalTextPosition(0);
+        btnFilter.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
         btnFilter.setName("btnFilter"); // NOI18N
-        btnFilter.setVerticalTextPosition(3);
+        btnFilter.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
         jToolBar2.add(btnFilter);
+
+        jLabel1.setText(resourceMap.getString("jLabel1.text")); // NOI18N
+        jLabel1.setName("jLabel1"); // NOI18N
+        jToolBar2.add(jLabel1);
+
+        jSplitPane1.setDividerLocation(200);
+        jSplitPane1.setDividerSize(3);
+        jSplitPane1.setName("jSplitPane1"); // NOI18N
 
         jScrollPane1.setName("jScrollPane1"); // NOI18N
 
@@ -259,13 +320,27 @@ public class EditTableData extends javax.swing.JPanel {
         tableData.setName("tableData"); // NOI18N
         jScrollPane1.setViewportView(tableData);
 
+        jSplitPane1.setRightComponent(jScrollPane1);
+
+        jScrollPane2.setName("jScrollPane2"); // NOI18N
+
+        jListRow.setModel(new javax.swing.AbstractListModel() {
+            String[] strings = { "Item 1", "Item 2", "Item 3", "Item 4", "Item 5" };
+            public int getSize() { return strings.length; }
+            public Object getElementAt(int i) { return strings[i]; }
+        });
+        jListRow.setName("jListRow"); // NOI18N
+        jScrollPane2.setViewportView(jListRow);
+
+        jSplitPane1.setLeftComponent(jScrollPane2);
+
         org.jdesktop.layout.GroupLayout layout = new org.jdesktop.layout.GroupLayout(this);
         this.setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
-            .add(jToolBar1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
-            .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
-            .add(jToolBar2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 420, Short.MAX_VALUE)
+            .add(jToolBar1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+            .add(jToolBar2, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
+            .add(jSplitPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 900, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(org.jdesktop.layout.GroupLayout.LEADING)
@@ -274,7 +349,7 @@ public class EditTableData extends javax.swing.JPanel {
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
                 .add(jToolBar2, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE, 25, org.jdesktop.layout.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(org.jdesktop.layout.LayoutStyle.RELATED)
-                .add(jScrollPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 295, Short.MAX_VALUE))
+                .add(jSplitPane1, org.jdesktop.layout.GroupLayout.DEFAULT_SIZE, 596, Short.MAX_VALUE))
         );
     }// </editor-fold>//GEN-END:initComponents
 
@@ -358,6 +433,10 @@ public class EditTableData extends javax.swing.JPanel {
         rowKey = txtFieldRowKey.getText();
         showData(0);
     }
+    
+    public void jListItemClickAction() {
+        
+    }
 
     @Action
     public void checkBoxFilter() {
@@ -377,6 +456,9 @@ public class EditTableData extends javax.swing.JPanel {
 
         showData(0);
     }
+    
+    
+    
 
 
 
@@ -391,7 +473,11 @@ public class EditTableData extends javax.swing.JPanel {
     private javax.swing.JCheckBox checkBoxFilter;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JList jListRow;
     private javax.swing.JScrollPane jScrollPane1;
+    private javax.swing.JScrollPane jScrollPane2;
+    private javax.swing.JSplitPane jSplitPane1;
     private javax.swing.JToolBar jToolBar1;
     private javax.swing.JToolBar jToolBar2;
     private javax.swing.JTable tableData;

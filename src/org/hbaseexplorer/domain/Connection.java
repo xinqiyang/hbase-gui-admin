@@ -3,7 +3,7 @@ package org.hbaseexplorer.domain;
 import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
-import javax.swing.JOptionPane;
+
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.HTableDescriptor;
@@ -33,7 +33,7 @@ public class Connection implements Serializable {
             refreshTables();
         }
         catch(MasterNotRunningException me) {
-            throw new ExplorerException("Cannot connect to " + hbaseConfiguration.get("hbase.zookeeper.quorum"));
+            throw new ExplorerException("Cannot connect to cluster");
         }
     }
 
