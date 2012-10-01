@@ -6,7 +6,9 @@ import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
 import javax.swing.tree.TreePath;
+import org.apache.commons.logging.Log;
 import org.apache.hadoop.conf.Configuration;
+import org.buddy.javatools.Utils;
 import org.hbaseexplorer.HBaseExplorerView;
 import org.hbaseexplorer.domain.Connection;
 import org.hbaseexplorer.domain.Table;
@@ -48,13 +50,18 @@ public class ConnectionTree extends JTree {
         addConnectionToTree(conn);
     }
 
+    //double click 
     public void doubleClick(TreePath selectionPath) {
+        Log log = Utils.getLog();
+        long start =  System.currentTimeMillis();
         DefaultMutableTreeNode selectedNode = (DefaultMutableTreeNode)selectionPath.getLastPathComponent();
 
         Object userObject = selectedNode.getUserObject();
         if (userObject instanceof Table) {
             mainApp.getTabPane().showTable((Table)userObject);
         }
+        log.info("double click time time:" + (System.currentTimeMillis() - start));
+        
     }
 
 

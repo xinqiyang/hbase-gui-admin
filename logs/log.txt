@@ -1,0 +1,451 @@
+2012-10-01 11:45:56,922 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:zookeeper.version=3.2.2-888565, built on 12/08/2009 21:51 GMT
+2012-10-01 11:45:56,928 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:host.name=172.17.1.49
+2012-10-01 11:45:56,928 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.version=1.6.0_35
+2012-10-01 11:45:56,929 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.vendor=Apple Inc.
+2012-10-01 11:45:56,954 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+2012-10-01 11:45:56,955 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.class.path=/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/appframework-1.0.3.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/swing-worker-1.1.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/beansbinding-1.2.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/AgileJSON-2009-03-30.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/appframework-1.0.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-cli-2.0-SNAPSHOT.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-el-from-jetty-5.1.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-httpclient-3.0.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-api-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-math-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-hdfs127-core.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-compiler-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-runtime-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-util-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jruby-complete-1.2.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/json.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/junit-3.8.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/libthrift-r771587.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/lucene-core-3.0.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/servlet-api-2.5-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-layout-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-worker-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/xmlenc-0.52.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/zookeeper-3.2.2.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-api-1.6.1.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-log4j12-1.6.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/build/classes:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/src
+2012-10-01 11:45:56,956 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.library.path=.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+2012-10-01 11:45:56,957 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.io.tmpdir=/var/folders/8q/b22m0d8j7l3fbfkpg727x3s80000gn/T/
+2012-10-01 11:45:56,957 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.compiler=<NA>
+2012-10-01 11:45:56,958 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.name=Mac OS X
+2012-10-01 11:45:56,959 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.arch=x86_64
+2012-10-01 11:45:56,959 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.version=10.8.2
+2012-10-01 11:45:56,960 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.name=xinqiyang
+2012-10-01 11:45:56,961 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.home=/Users/xinqiyang
+2012-10-01 11:45:56,961 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.dir=/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer
+2012-10-01 11:45:56,963 INFO  [AWT-EventQueue-0] ZooKeeper (ZooKeeper.java:369) <init> - Initiating client connection, connectString=172.17.1.206:2181 sessionTimeout=60000 watcher=org.apache.hadoop.hbase.client.HConnectionManager$ClientZKWatcher@178c4a7f
+2012-10-01 11:45:56,965 INFO  [AWT-EventQueue-0] ClientCnxn (ClientCnxn.java:92) <clinit> - zookeeper.disableAutoWatchReset is false
+2012-10-01 11:45:56,997 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:869) startConnect - Attempting connection to server /172.17.1.206:2181
+2012-10-01 11:45:57,034 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:785) primeConnection - Priming connection to java.nio.channels.SocketChannel[connected local=/172.17.1.49:55098 remote=/172.17.1.206:2181]
+2012-10-01 11:45:57,038 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:937) run - Server connection successful
+2012-10-01 11:46:01,065 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:46:01,066 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data49
+2012-10-01 11:46:08,763 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data7696
+2012-10-01 11:46:08,769 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:7808
+2012-10-01 11:46:11,706 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:46:11,707 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data87
+2012-10-01 11:46:11,717 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data9
+2012-10-01 11:46:11,721 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:112
+2012-10-01 11:46:16,717 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:46:16,718 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data10
+2012-10-01 11:46:16,725 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data6
+2012-10-01 11:46:16,729 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:31
+2012-10-01 11:46:22,327 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:46:22,328 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data16
+2012-10-01 11:46:22,334 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data6
+2012-10-01 11:46:22,337 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:35
+2012-10-01 11:46:27,001 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:46:27,002 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data29
+2012-10-01 11:46:27,007 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data5
+2012-10-01 11:46:27,011 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:46
+2012-10-01 11:46:29,887 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:46:29,888 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data33
+2012-10-01 11:46:29,926 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data38
+2012-10-01 11:46:29,929 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:88
+2012-10-01 11:46:31,687 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:46:31,688 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data10
+2012-10-01 11:46:31,694 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data6
+2012-10-01 11:46:31,697 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:28
+2012-10-01 11:46:32,711 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:46:32,711 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data10
+2012-10-01 11:46:32,759 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data47
+2012-10-01 11:46:32,763 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:75
+2012-10-01 11:46:34,054 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:46:34,054 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data11
+2012-10-01 11:46:39,686 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data5631
+2012-10-01 11:46:39,693 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:5659
+2012-10-01 11:46:39,755 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:46:39,756 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data14
+2012-10-01 11:46:39,813 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data56
+2012-10-01 11:46:39,817 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:84
+2012-10-01 11:46:51,445 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:46:51,446 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data13
+2012-10-01 11:46:54,528 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data3082
+2012-10-01 11:46:54,531 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:3109
+2012-10-01 12:44:54,584 WARN  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:967) run - Exception closing session 0x139fc1a30eb00cc to sun.nio.ch.SelectionKeyImpl@795e0c2b
+java.io.IOException: TIMED OUT
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:906)
+2012-10-01 12:44:56,031 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:869) startConnect - Attempting connection to server /172.17.1.206:2181
+2012-10-01 12:44:56,035 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:785) primeConnection - Priming connection to java.nio.channels.SocketChannel[connected local=/172.17.1.49:55249 remote=/172.17.1.206:2181]
+2012-10-01 12:44:56,035 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:937) run - Server connection successful
+2012-10-01 12:44:56,038 WARN  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:967) run - Exception closing session 0x139fc1a30eb00cc to sun.nio.ch.SelectionKeyImpl@766b2325
+java.io.IOException: Session Expired
+	at org.apache.zookeeper.ClientCnxn$SendThread.readConnectResult(ClientCnxn.java:589)
+	at org.apache.zookeeper.ClientCnxn$SendThread.doIO(ClientCnxn.java:709)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:945)
+2012-10-01 12:44:56,039 WARN  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:1001) cleanup - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.SocketChannelImpl.shutdown(Native Method)
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:665)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:430)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:999)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:970)
+2012-10-01 12:44:56,039 INFO  [AWT-EventQueue-0-EventThread] ZooKeeper (ZooKeeper.java:502) close - Closing session: 0x139fc1a30eb00cc
+2012-10-01 12:44:56,040 INFO  [AWT-EventQueue-0-EventThread] ClientCnxn (ClientCnxn.java:1068) close - Closing ClientCnxn for session: 0x139fc1a30eb00cc
+2012-10-01 12:44:56,044 INFO  [AWT-EventQueue-0-EventThread] ClientCnxn (ClientCnxn.java:1054) disconnect - Disconnecting ClientCnxn for session: 0x139fc1a30eb00cc
+2012-10-01 12:44:56,044 INFO  [AWT-EventQueue-0-EventThread] ZooKeeper (ZooKeeper.java:510) close - Session: 0x139fc1a30eb00cc closed
+2012-10-01 12:44:56,044 INFO  [AWT-EventQueue-0-EventThread] ClientCnxn (ClientCnxn.java:514) run - EventThread shut down
+r/HBaseXplorer/lib/hbase-0.20.3-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-compiler-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-runtime-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-util-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jruby-complete-1.2.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/json.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/junit-3.8.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/libthrift-r771587.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/lucene-core-3.0.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/servlet-api-2.5-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-layout-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-worker-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/xmlenc-0.52.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/zookeeper-3.2.2.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-api-1.6.1.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-log4j12-1.6.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/build/classes:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/src
+2012-10-01 11:55:58,553 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.library.path=.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+2012-10-01 11:55:58,554 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.io.tmpdir=/var/folders/8q/b22m0d8j7l3fbfkpg727x3s80000gn/T/
+2012-10-01 11:55:58,557 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.compiler=<NA>
+2012-10-01 11:55:58,558 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.name=Mac OS X
+2012-10-01 11:55:58,558 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.arch=x86_64
+2012-10-01 11:55:58,559 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.version=10.8.2
+2012-10-01 11:55:58,560 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.name=xinqiyang
+2012-10-01 11:55:58,560 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.home=/Users/xinqiyang
+2012-10-01 11:55:58,561 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.dir=/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer
+2012-10-01 11:55:58,562 INFO  [AWT-EventQueue-0] ZooKeeper (ZooKeeper.java:369) <init> - Initiating client connection, connectString=172.17.1.206:2181 sessionTimeout=60000 watcher=org.apache.hadoop.hbase.client.HConnectionManager$ClientZKWatcher@3ebfbbe3
+2012-10-01 11:55:58,564 INFO  [AWT-EventQueue-0] ClientCnxn (ClientCnxn.java:92) <clinit> - zookeeper.disableAutoWatchReset is false
+2012-10-01 11:55:58,594 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:869) startConnect - Attempting connection to server /172.17.1.206:2181
+2012-10-01 11:55:58,602 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:785) primeConnection - Priming connection to java.nio.channels.SocketChannel[connected local=/172.17.1.49:55125 remote=/172.17.1.206:2181]
+2012-10-01 11:55:58,605 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:937) run - Server connection successful
+2012-10-01 11:56:01,931 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:2
+2012-10-01 11:56:01,931 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data40
+2012-10-01 11:56:01,942 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data10
+2012-10-01 11:56:01,947 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:94
+2012-10-01 11:56:03,098 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:03,099 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data9
+2012-10-01 11:56:03,104 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data4
+2012-10-01 11:56:03,108 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:29
+2012-10-01 11:56:06,605 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:06,606 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data10
+2012-10-01 11:56:06,642 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data36
+2012-10-01 11:56:06,648 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:62
+2012-10-01 11:56:07,746 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:07,746 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data11
+2012-10-01 11:56:07,755 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data8
+2012-10-01 11:56:07,759 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:34
+2012-10-01 11:56:08,578 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:08,578 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data9
+2012-10-01 11:56:08,584 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data5
+2012-10-01 11:56:08,590 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:31
+2012-10-01 11:56:09,401 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:09,402 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data19
+2012-10-01 11:56:09,411 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data8
+2012-10-01 11:56:09,415 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:43
+2012-10-01 11:56:11,101 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:11,101 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data8
+2012-10-01 11:56:11,107 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data5
+2012-10-01 11:56:11,111 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:30
+2012-10-01 11:56:12,046 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:12,047 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data24
+2012-10-01 11:56:12,643 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data596
+2012-10-01 11:56:12,647 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:635
+2012-10-01 11:56:12,932 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:56:12,932 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data9
+2012-10-01 11:56:12,938 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data6
+2012-10-01 11:56:12,942 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:29
+2012-10-01 11:56:14,413 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:14,414 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data16
+2012-10-01 11:56:14,419 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data4
+2012-10-01 11:56:14,423 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:35
+2012-10-01 11:56:15,411 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:15,411 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data49
+2012-10-01 11:56:15,418 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data6
+2012-10-01 11:56:15,421 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:69
+2012-10-01 11:56:20,179 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:20,180 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data52
+2012-10-01 11:56:20,276 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data96
+2012-10-01 11:56:20,281 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:162
+2012-10-01 11:56:21,317 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:56:21,317 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data58
+2012-10-01 11:56:21,693 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data375
+2012-10-01 11:56:21,697 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:447
+2012-10-01 11:56:22,653 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:22,654 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data12
+2012-10-01 11:56:25,824 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data3170
+2012-10-01 11:56:25,829 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:3196
+2012-10-01 11:56:27,297 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:27,298 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data16
+2012-10-01 11:56:27,359 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data61
+2012-10-01 11:56:27,362 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:91
+2012-10-01 11:56:28,445 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:28,446 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data8
+2012-10-01 11:56:28,558 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data112
+2012-10-01 11:56:28,562 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:145
+2012-10-01 11:56:29,497 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:29,498 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data12
+2012-10-01 11:56:30,143 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data644
+2012-10-01 11:56:30,147 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:671
+2012-10-01 11:56:31,003 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:31,004 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data13
+2012-10-01 11:56:31,062 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data58
+2012-10-01 11:56:31,065 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:83
+2012-10-01 11:56:32,081 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:32,082 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data19
+2012-10-01 11:56:32,279 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data197
+2012-10-01 11:56:32,282 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:227
+2012-10-01 11:56:33,274 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:56:33,985 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:34,610 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:56:35,459 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:36,099 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:56:36,692 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:56:37,317 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:40,365 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:40,897 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:41,417 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:42,036 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:42,672 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:43,225 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:43,753 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:44,257 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:44,779 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:45,939 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:46,484 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:46,943 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:47,407 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:47,963 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:48,562 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:49,061 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:49,534 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:50,130 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:50,722 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:52,530 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:53,316 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:55,022 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:1
+2012-10-01 11:58:56,766 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:57,217 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:58:59,219 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:58:59,219 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data12
+2012-10-01 11:59:06,423 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data7203
+2012-10-01 11:59:06,427 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:7228
+2012-10-01 11:59:07,301 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:59:07,915 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:59:08,461 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:59:08,957 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:59:10,239 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:59:10,896 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:59:13,912 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:59:13,912 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data11
+2012-10-01 11:59:13,917 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data4
+2012-10-01 11:59:13,921 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:30
+2012-10-01 11:59:14,717 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:59:14,717 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data12
+2012-10-01 11:59:14,723 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data5
+2012-10-01 11:59:14,726 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:28
+2012-10-01 11:59:25,190 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:59:33,207 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:59:33,208 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data9
+2012-10-01 11:59:33,216 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data8
+2012-10-01 11:59:34,347 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 11:59:34,348 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data12
+2012-10-01 11:59:34,355 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data7
+2012-10-01 11:59:35,606 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 11:59:35,606 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data9
+2012-10-01 11:59:35,614 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data7
+2012-10-01 11:59:36,574 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:1
+2012-10-01 11:59:43,631 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:0
+2012-10-01 12:44:55,803 WARN  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:967) run - Exception closing session 0x139fc1a30eb00ce to sun.nio.ch.SelectionKeyImpl@1f195fc
+java.io.IOException: TIMED OUT
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:906)
+2012-10-01 12:44:57,418 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:869) startConnect - Attempting connection to server /172.17.1.206:2181
+2012-10-01 12:44:57,420 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:785) primeConnection - Priming connection to java.nio.channels.SocketChannel[connected local=/172.17.1.49:55252 remote=/172.17.1.206:2181]
+2012-10-01 12:44:57,420 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:937) run - Server connection successful
+2012-10-01 12:44:57,423 WARN  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:967) run - Exception closing session 0x139fc1a30eb00ce to sun.nio.ch.SelectionKeyImpl@1f65b124
+java.io.IOException: Session Expired
+	at org.apache.zookeeper.ClientCnxn$SendThread.readConnectResult(ClientCnxn.java:589)
+	at org.apache.zookeeper.ClientCnxn$SendThread.doIO(ClientCnxn.java:709)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:945)
+2012-10-01 12:44:57,423 INFO  [AWT-EventQueue-0-EventThread] ZooKeeper (ZooKeeper.java:502) close - Closing session: 0x139fc1a30eb00ce
+2012-10-01 12:44:57,424 WARN  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:1001) cleanup - Ignoring exception during shutdown input
+java.net.SocketException: Socket is not connected
+	at sun.nio.ch.SocketChannelImpl.shutdown(Native Method)
+	at sun.nio.ch.SocketChannelImpl.shutdownInput(SocketChannelImpl.java:665)
+	at sun.nio.ch.SocketAdaptor.shutdownInput(SocketAdaptor.java:430)
+	at org.apache.zookeeper.ClientCnxn$SendThread.cleanup(ClientCnxn.java:999)
+	at org.apache.zookeeper.ClientCnxn$SendThread.run(ClientCnxn.java:970)
+2012-10-01 12:44:57,424 INFO  [AWT-EventQueue-0-EventThread] ClientCnxn (ClientCnxn.java:1068) close - Closing ClientCnxn for session: 0x139fc1a30eb00ce
+2012-10-01 12:44:57,426 INFO  [AWT-EventQueue-0-EventThread] ClientCnxn (ClientCnxn.java:1054) disconnect - Disconnecting ClientCnxn for session: 0x139fc1a30eb00ce
+2012-10-01 12:44:57,428 INFO  [AWT-EventQueue-0-EventThread] ZooKeeper (ZooKeeper.java:510) close - Session: 0x139fc1a30eb00ce closed
+2012-10-01 12:44:57,428 INFO  [AWT-EventQueue-0-EventThread] ClientCnxn (ClientCnxn.java:514) run - EventThread shut down
+2012-10-01 13:00:48,427 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:zookeeper.version=3.2.2-888565, built on 12/08/2009 21:51 GMT
+2012-10-01 13:00:48,431 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:host.name=172.17.1.49
+2012-10-01 13:00:48,432 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.version=1.6.0_35
+2012-10-01 13:00:48,432 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.vendor=Apple Inc.
+2012-10-01 13:00:48,433 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+2012-10-01 13:00:48,434 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.class.path=/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/appframework-1.0.3.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/swing-worker-1.1.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/beansbinding-1.2.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/AgileJSON-2009-03-30.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/appframework-1.0.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-cli-2.0-SNAPSHOT.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-el-from-jetty-5.1.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-httpclient-3.0.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-api-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-math-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-hdfs127-core.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-compiler-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-runtime-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-util-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jruby-complete-1.2.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/json.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/junit-3.8.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/libthrift-r771587.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/lucene-core-3.0.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/servlet-api-2.5-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-layout-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-worker-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/xmlenc-0.52.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/zookeeper-3.2.2.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-api-1.6.1.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-log4j12-1.6.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/build/classes:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/src
+2012-10-01 13:00:48,435 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.library.path=.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+2012-10-01 13:00:48,436 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.io.tmpdir=/var/folders/8q/b22m0d8j7l3fbfkpg727x3s80000gn/T/
+2012-10-01 13:00:48,436 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.compiler=<NA>
+2012-10-01 13:00:48,457 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.name=Mac OS X
+2012-10-01 13:00:48,458 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.arch=x86_64
+2012-10-01 13:00:48,462 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.version=10.8.2
+2012-10-01 13:00:48,463 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.name=xinqiyang
+2012-10-01 13:00:48,464 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.home=/Users/xinqiyang
+2012-10-01 13:00:48,464 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.dir=/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer
+2012-10-01 13:00:48,466 INFO  [AWT-EventQueue-0] ZooKeeper (ZooKeeper.java:369) <init> - Initiating client connection, connectString=172.17.1.206:2181 sessionTimeout=60000 watcher=org.apache.hadoop.hbase.client.HConnectionManager$ClientZKWatcher@6e82254d
+2012-10-01 13:00:48,472 INFO  [AWT-EventQueue-0] ClientCnxn (ClientCnxn.java:92) <clinit> - zookeeper.disableAutoWatchReset is false
+2012-10-01 13:00:48,510 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:869) startConnect - Attempting connection to server /172.17.1.206:2181
+2012-10-01 13:00:54,176 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:785) primeConnection - Priming connection to java.nio.channels.SocketChannel[connected local=/172.17.1.49:55319 remote=/172.17.1.206:2181]
+2012-10-01 13:00:54,181 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:937) run - Server connection successful
+2012-10-01 13:01:09,432 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:2
+2012-10-01 13:01:09,432 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data24
+2012-10-01 13:01:09,440 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data7
+2012-10-01 13:01:09,444 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:87
+2012-10-01 13:02:18,123 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:18,124 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data14
+2012-10-01 13:02:18,201 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data76
+2012-10-01 13:02:18,205 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:105
+2012-10-01 13:02:19,011 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:19,012 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data16
+2012-10-01 13:02:19,766 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data754
+2012-10-01 13:02:19,770 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:783
+2012-10-01 13:02:21,055 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:21,056 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data23
+2012-10-01 13:02:21,108 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data52
+2012-10-01 13:02:21,112 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:88
+2012-10-01 13:02:44,099 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:44,785 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:45,400 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:46,015 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:46,592 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:02:47,225 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:47,891 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:48,803 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:02:49,563 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:50,191 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:50,803 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:53,725 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:53,726 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data81
+2012-10-01 13:02:53,741 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data15
+2012-10-01 13:02:53,745 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:109
+2012-10-01 13:02:54,560 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:02:54,560 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data9
+2012-10-01 13:02:54,574 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data13
+2012-10-01 13:02:54,578 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:35
+2012-10-01 13:02:55,426 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:55,427 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data17
+2012-10-01 13:02:55,609 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data182
+2012-10-01 13:02:55,613 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:212
+2012-10-01 13:02:56,367 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:56,368 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data17
+2012-10-01 13:02:56,375 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data7
+2012-10-01 13:02:56,379 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:40
+2012-10-01 13:02:57,439 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:02:57,440 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data18
+2012-10-01 13:02:57,445 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data5
+2012-10-01 13:02:57,449 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:35
+2012-10-01 13:03:00,772 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:03:00,772 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data10
+2012-10-01 13:03:13,364 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data12591
+2012-10-01 13:03:13,367 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:12613
+2012-10-01 13:03:13,427 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:03:13,428 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data12
+2012-10-01 13:03:13,446 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data18
+2012-10-01 13:03:13,450 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:42
+2012-10-01 13:03:17,462 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:03:18,243 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:03:18,896 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:03:19,583 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:03:20,290 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:03:27,601 INFO  [HCM.shutdownHook] ZooKeeper (ZooKeeper.java:502) close - Closing session: 0x139fc1a30eb00d0
+2012-10-01 13:03:27,601 INFO  [HCM.shutdownHook] ClientCnxn (ClientCnxn.java:1068) close - Closing ClientCnxn for session: 0x139fc1a30eb00d0
+2012-10-01 13:03:27,605 INFO  [HCM.shutdownHook] ClientCnxn (ClientCnxn.java:1054) disconnect - Disconnecting ClientCnxn for session: 0x139fc1a30eb00d0
+2012-10-01 13:03:27,605 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:961) run - Exception while closing send thread for session 0x139fc1a30eb00d0 : Read error rc = -1 java.nio.DirectByteBuffer[pos=0 lim=4 cap=4]
+2012-10-01 13:03:27,605 INFO  [AWT-EventQueue-0-EventThread] ClientCnxn (ClientCnxn.java:514) run - EventThread shut down
+2012-10-01 13:03:27,605 INFO  [HCM.shutdownHook] ZooKeeper (ZooKeeper.java:510) close - Session: 0x139fc1a30eb00d0 closed
+2012-10-01 13:10:22,414 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:zookeeper.version=3.2.2-888565, built on 12/08/2009 21:51 GMT
+2012-10-01 13:10:22,417 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:host.name=172.17.1.49
+2012-10-01 13:10:22,418 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.version=1.6.0_35
+2012-10-01 13:10:22,419 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.vendor=Apple Inc.
+2012-10-01 13:10:22,419 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+2012-10-01 13:10:22,420 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.class.path=/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/appframework-1.0.3.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/swing-worker-1.1.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/beansbinding-1.2.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/AgileJSON-2009-03-30.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/appframework-1.0.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-cli-2.0-SNAPSHOT.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-el-from-jetty-5.1.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-httpclient-3.0.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-api-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-math-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-hdfs127-core.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-compiler-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-runtime-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-util-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jruby-complete-1.2.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/json.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/junit-3.8.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/libthrift-r771587.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/lucene-core-3.0.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/servlet-api-2.5-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-layout-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-worker-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/xmlenc-0.52.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/zookeeper-3.2.2.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-api-1.6.1.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-log4j12-1.6.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/build/classes:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/src
+2012-10-01 13:10:22,421 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.library.path=.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+2012-10-01 13:10:22,421 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.io.tmpdir=/var/folders/8q/b22m0d8j7l3fbfkpg727x3s80000gn/T/
+2012-10-01 13:10:22,422 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.compiler=<NA>
+2012-10-01 13:10:22,423 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.name=Mac OS X
+2012-10-01 13:10:22,445 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.arch=x86_64
+2012-10-01 13:10:22,445 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.version=10.8.2
+2012-10-01 13:10:22,446 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.name=xinqiyang
+2012-10-01 13:10:22,447 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.home=/Users/xinqiyang
+2012-10-01 13:10:22,447 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.dir=/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer
+2012-10-01 13:10:22,449 INFO  [AWT-EventQueue-0] ZooKeeper (ZooKeeper.java:369) <init> - Initiating client connection, connectString=172.17.1.206:2181 sessionTimeout=60000 watcher=org.apache.hadoop.hbase.client.HConnectionManager$ClientZKWatcher@6ec5122f
+2012-10-01 13:10:22,451 INFO  [AWT-EventQueue-0] ClientCnxn (ClientCnxn.java:92) <clinit> - zookeeper.disableAutoWatchReset is false
+2012-10-01 13:10:22,475 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:869) startConnect - Attempting connection to server /172.17.1.206:2181
+2012-10-01 13:10:22,484 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:785) primeConnection - Priming connection to java.nio.channels.SocketChannel[connected local=/172.17.1.49:55371 remote=/172.17.1.206:2181]
+2012-10-01 13:10:22,487 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:937) run - Server connection successful
+2012-10-01 13:10:27,221 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:10:27,222 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data30
+2012-10-01 13:10:30,858 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data3635
+2012-10-01 13:10:30,862 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:3708
+2012-10-01 13:10:32,835 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:10:33,609 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:10:34,225 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:0
+2012-10-01 13:10:49,410 INFO  [HCM.shutdownHook] ZooKeeper (ZooKeeper.java:502) close - Closing session: 0x139fc1a30eb00d2
+2012-10-01 13:10:49,411 INFO  [HCM.shutdownHook] ClientCnxn (ClientCnxn.java:1068) close - Closing ClientCnxn for session: 0x139fc1a30eb00d2
+2012-10-01 13:10:49,434 INFO  [HCM.shutdownHook] ClientCnxn (ClientCnxn.java:1054) disconnect - Disconnecting ClientCnxn for session: 0x139fc1a30eb00d2
+2012-10-01 13:10:49,434 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:961) run - Exception while closing send thread for session 0x139fc1a30eb00d2 : Read error rc = -1 java.nio.DirectByteBuffer[pos=0 lim=4 cap=4]
+2012-10-01 13:10:49,434 INFO  [AWT-EventQueue-0-EventThread] ClientCnxn (ClientCnxn.java:514) run - EventThread shut down
+2012-10-01 13:10:49,434 INFO  [HCM.shutdownHook] ZooKeeper (ZooKeeper.java:510) close - Session: 0x139fc1a30eb00d2 closed
+2012-10-01 13:11:55,383 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:zookeeper.version=3.2.2-888565, built on 12/08/2009 21:51 GMT
+2012-10-01 13:11:55,386 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:host.name=172.17.1.49
+2012-10-01 13:11:55,386 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.version=1.6.0_35
+2012-10-01 13:11:55,387 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.vendor=Apple Inc.
+2012-10-01 13:11:55,387 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+2012-10-01 13:11:55,388 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.class.path=/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/appframework-1.0.3.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/swing-worker-1.1.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/beansbinding-1.2.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/AgileJSON-2009-03-30.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/appframework-1.0.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-cli-2.0-SNAPSHOT.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-el-from-jetty-5.1.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-httpclient-3.0.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-api-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-math-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-hdfs127-core.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-compiler-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-runtime-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-util-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jruby-complete-1.2.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/json.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/junit-3.8.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/libthrift-r771587.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/lucene-core-3.0.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/servlet-api-2.5-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-layout-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-worker-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/xmlenc-0.52.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/zookeeper-3.2.2.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-api-1.6.1.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-log4j12-1.6.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/build/classes:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/src
+2012-10-01 13:11:55,390 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.library.path=.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+2012-10-01 13:11:55,391 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.io.tmpdir=/var/folders/8q/b22m0d8j7l3fbfkpg727x3s80000gn/T/
+2012-10-01 13:11:55,391 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.compiler=<NA>
+2012-10-01 13:11:55,392 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.name=Mac OS X
+2012-10-01 13:11:55,411 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.arch=x86_64
+2012-10-01 13:11:55,412 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.version=10.8.2
+2012-10-01 13:11:55,413 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.name=xinqiyang
+2012-10-01 13:11:55,413 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.home=/Users/xinqiyang
+2012-10-01 13:11:55,414 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.dir=/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer
+2012-10-01 13:11:55,415 INFO  [AWT-EventQueue-0] ZooKeeper (ZooKeeper.java:369) <init> - Initiating client connection, connectString=172.17.1.206:2181 sessionTimeout=60000 watcher=org.apache.hadoop.hbase.client.HConnectionManager$ClientZKWatcher@2b76086d
+2012-10-01 13:11:55,417 INFO  [AWT-EventQueue-0] ClientCnxn (ClientCnxn.java:92) <clinit> - zookeeper.disableAutoWatchReset is false
+2012-10-01 13:11:55,441 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:869) startConnect - Attempting connection to server /172.17.1.206:2181
+2012-10-01 13:11:55,451 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:785) primeConnection - Priming connection to java.nio.channels.SocketChannel[connected local=/172.17.1.49:55379 remote=/172.17.1.206:2181]
+2012-10-01 13:11:55,454 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:937) run - Server connection successful
+2012-10-01 13:11:58,828 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:2
+2012-10-01 13:11:58,829 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data84
+2012-10-01 13:12:13,033 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data14204
+2012-10-01 13:12:13,038 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:14330
+2012-10-01 13:13:04,211 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:zookeeper.version=3.2.2-888565, built on 12/08/2009 21:51 GMT
+2012-10-01 13:13:04,214 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:host.name=172.17.1.49
+2012-10-01 13:13:04,215 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.version=1.6.0_35
+2012-10-01 13:13:04,216 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.vendor=Apple Inc.
+2012-10-01 13:13:04,216 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.home=/System/Library/Java/JavaVirtualMachines/1.6.0.jdk/Contents/Home
+2012-10-01 13:13:04,217 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.class.path=/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/appframework-1.0.3.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/swing-worker-1.1.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/platform/modules/ext/swing-layout-1.0.4.jar:/Applications/NetBeans/NetBeans 7.0.1.app/Contents/Resources/NetBeans/java/modules/ext/beansbinding-1.2.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/AgileJSON-2009-03-30.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/appframework-1.0.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-cli-2.0-SNAPSHOT.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-el-from-jetty-5.1.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-httpclient-3.0.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-logging-api-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/commons-math-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-hdfs127-core.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hadoop-0.20.1-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3-test.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/hbase-0.20.3.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-compiler-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jasper-runtime-5.5.12.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jetty-util-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/jruby-complete-1.2.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/json.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/junit-3.8.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/libthrift-r771587.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/lucene-core-3.0.0.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/servlet-api-2.5-6.1.14.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-layout-1.0.4.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/swing-worker-1.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/xmlenc-0.52.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/lib/zookeeper-3.2.2.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/log4j-1.2.15.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-api-1.6.1.jar:/Users/xinqiyang/Develop/java/hbase-0.20.4/lib/slf4j-log4j12-1.6.1.jar:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/build/classes:/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer/src
+2012-10-01 13:13:04,218 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.library.path=.:/Library/Java/Extensions:/System/Library/Java/Extensions:/usr/lib/java
+2012-10-01 13:13:04,219 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.io.tmpdir=/var/folders/8q/b22m0d8j7l3fbfkpg727x3s80000gn/T/
+2012-10-01 13:13:04,220 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:java.compiler=<NA>
+2012-10-01 13:13:04,249 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.name=Mac OS X
+2012-10-01 13:13:04,250 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.arch=x86_64
+2012-10-01 13:13:04,251 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:os.version=10.8.2
+2012-10-01 13:13:04,252 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.name=xinqiyang
+2012-10-01 13:13:04,252 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.home=/Users/xinqiyang
+2012-10-01 13:13:04,253 INFO  [AWT-EventQueue-0] ZooKeeper (Environment.java:97) logEnv - Client environment:user.dir=/Users/xinqiyang/Develop/java/servertools/server-tools/HBaseXplorer/HBaseXplorer
+2012-10-01 13:13:04,255 INFO  [AWT-EventQueue-0] ZooKeeper (ZooKeeper.java:369) <init> - Initiating client connection, connectString=172.17.1.206:2181 sessionTimeout=60000 watcher=org.apache.hadoop.hbase.client.HConnectionManager$ClientZKWatcher@3041876
+2012-10-01 13:13:04,258 INFO  [AWT-EventQueue-0] ClientCnxn (ClientCnxn.java:92) <clinit> - zookeeper.disableAutoWatchReset is false
+2012-10-01 13:13:04,302 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:869) startConnect - Attempting connection to server /172.17.1.206:2181
+2012-10-01 13:13:04,311 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:785) primeConnection - Priming connection to java.nio.channels.SocketChannel[connected local=/172.17.1.49:55386 remote=/172.17.1.206:2181]
+2012-10-01 13:13:04,313 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:937) run - Server connection successful
+2012-10-01 13:13:07,000 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:13:07,001 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data31
+2012-10-01 13:13:07,011 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data9
+2012-10-01 13:13:07,016 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:93
+2012-10-01 13:13:09,100 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:13:09,101 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data63
+2012-10-01 13:13:09,117 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data16
+2012-10-01 13:13:09,121 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:94
+2012-10-01 13:13:11,712 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:13:11,712 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data12
+2012-10-01 13:13:11,718 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data5
+2012-10-01 13:13:11,722 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:36
+2012-10-01 13:13:12,746 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:13:12,746 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data14
+2012-10-01 13:13:12,752 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data5
+2012-10-01 13:13:12,756 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:35
+2012-10-01 13:13:13,928 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:113) showData - end time:1
+2012-10-01 13:13:13,928 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:63) <init> - first show Data8
+2012-10-01 13:13:13,934 INFO  [AWT-EventQueue-0] EditTableData (EditTableData.java:70) <init> - start load show Data5
+2012-10-01 13:13:13,938 INFO  [AWT-EventQueue-0] ConnectionTree (ConnectionTree.java:63) doubleClick - double click time time:30
+2012-10-01 13:13:16,419 INFO  [HCM.shutdownHook] ZooKeeper (ZooKeeper.java:502) close - Closing session: 0x139fc1a30eb00d4
+2012-10-01 13:13:16,419 INFO  [HCM.shutdownHook] ClientCnxn (ClientCnxn.java:1068) close - Closing ClientCnxn for session: 0x139fc1a30eb00d4
+2012-10-01 13:13:16,426 INFO  [HCM.shutdownHook] ClientCnxn (ClientCnxn.java:1054) disconnect - Disconnecting ClientCnxn for session: 0x139fc1a30eb00d4
+2012-10-01 13:13:16,427 INFO  [AWT-EventQueue-0-SendThread] ClientCnxn (ClientCnxn.java:961) run - Exception while closing send thread for session 0x139fc1a30eb00d4 : Read error rc = -1 java.nio.DirectByteBuffer[pos=0 lim=4 cap=4]
+2012-10-01 13:13:16,427 INFO  [AWT-EventQueue-0-EventThread] ClientCnxn (ClientCnxn.java:514) run - EventThread shut down
+2012-10-01 13:13:16,427 INFO  [HCM.shutdownHook] ZooKeeper (ZooKeeper.java:510) close - Session: 0x139fc1a30eb00d4 closed

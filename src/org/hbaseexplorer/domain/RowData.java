@@ -19,7 +19,7 @@ public class RowData {
         triplets = new ArrayList<HBTriplet>();
         this.rowKey = rowKey;
     }
-
+//
     public void add(HBTriplet column) {
         triplets.add(column);
     }

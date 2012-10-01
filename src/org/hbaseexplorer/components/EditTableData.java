@@ -24,8 +24,10 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
+import org.apache.commons.logging.Log;
 import org.apache.hadoop.hbase.client.Delete;
 import org.apache.hadoop.hbase.client.Put;
+import org.buddy.javatools.Utils;
 import org.hbaseexplorer.HBaseExplorerApp;
 import org.hbaseexplorer.components.renderers.EditTableCellRenderer;
 import org.hbaseexplorer.datamodels.EditTableDataModel;
@@ -35,7 +37,6 @@ import org.hbaseexplorer.domain.RowData;
 import org.hbaseexplorer.domain.Table;
 import org.hbaseexplorer.exception.ExplorerException;
 import org.jdesktop.application.Action;
-
 /**
  *
  * @author zaharije
@@ -55,20 +56,23 @@ public class EditTableData extends javax.swing.JPanel {
         this.table = table;
         this.filterModel = new FilterModel();
 
+        Log log = Utils.getLog();
         //tableData.setDefaultRenderer(String.class, new EditTableCellRenderer());
-
+        long start =  System.currentTimeMillis();
         showData(0);
-        
+        log.info("first show Data" + (System.currentTimeMillis() - start));
         //add by xinqiyang
         //load Rows
-        loadRows(5000);
+        long startLoad =  System.currentTimeMillis();
+        loadRows(2000);
         setjListRowListener();
         jLabel1.setText("   ROWS TATAL:"+String.valueOf(this.Total));
+        log.info("start load show Data" + (System.currentTimeMillis() - startLoad));
     }
     
     private void loadRows(int num)
     {
-        EditTableDataModel model = new EditTableDataModel(table, num, "", filterModel);
+        EditTableDataModel model = new EditTableDataModel(table, num);
         jListRow.setModel(model.getRowData(num));
         this.Total = model.getRowsTotal();
         //jLabel1.setText(String.valueOf(model.getRowsTotal()));
@@ -99,11 +103,14 @@ public class EditTableData extends javax.swing.JPanel {
         EditTableDataModel model = new EditTableDataModel(table, skip, rowKey, filterModel);
         autoResizeColWidth(tableData, model);
 
+        Log log = Utils.getLog();
+        long start =  System.currentTimeMillis();
         TableColumnModel columnModel = tableData.getColumnModel();
         for (int i = 0; i < tableData.getColumnCount(); i++) {
+            //edit
             columnModel.getColumn(i).setCellRenderer(new EditTableCellRenderer());
         }
-
+        log.info("end time:" + (System.currentTimeMillis() - start));
         rowKey = model.getRowKey();
         //set the first rowkey
         txtFieldRowKey.setText(rowKey);

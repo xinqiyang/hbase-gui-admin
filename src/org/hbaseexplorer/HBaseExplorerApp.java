@@ -4,6 +4,7 @@
 
 package org.hbaseexplorer;
 
+import org.apache.log4j.PropertyConfigurator;
 import org.jdesktop.application.Application;
 import org.jdesktop.application.SingleFrameApplication;
 
@@ -11,6 +12,8 @@ import org.jdesktop.application.SingleFrameApplication;
  * The main class of the application.
  */
 public class HBaseExplorerApp extends SingleFrameApplication {
+    
+    private static final String LOG4J_CONF_FILE = "./conf/log4j.properties";
 
     /**
      * At startup create and show the main frame of the application.
@@ -42,5 +45,7 @@ public class HBaseExplorerApp extends SingleFrameApplication {
      */
     public static void main(String[] args) {
         launch(HBaseExplorerApp.class, args);
+        //set log info
+        PropertyConfigurator.configure(LOG4J_CONF_FILE);
     }
 }

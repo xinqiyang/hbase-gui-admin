@@ -4,21 +4,20 @@
  */
 package org.hbaseexplorer.datamodels;
 
-import java.io.ByteArrayOutputStream;
-import java.io.DataOutputStream;
 import java.io.IOException;
 import java.io.UnsupportedEncodingException;
-import java.util.ArrayList;
 import java.util.logging.Level;
 import java.util.logging.Logger;
 import javax.swing.DefaultListModel;
 import javax.swing.table.AbstractTableModel;
+import org.apache.commons.logging.Log;
 import org.apache.hadoop.hbase.KeyValue;
 import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.client.ResultScanner;
 import org.apache.hadoop.hbase.filter.CompareFilter;
 import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
+import org.buddy.javatools.Utils;
 import org.hbaseexplorer.domain.FilterModel;
 import org.hbaseexplorer.domain.HBTriplet;
 import org.hbaseexplorer.domain.RowData;
@@ -41,6 +40,7 @@ public class EditTableDataModel extends AbstractTableModel {
 
     private int loadCount =0;
     
+    //load data wast to ma
     public EditTableDataModel(Table table, Integer skip, String rowKey, FilterModel filterModel) {
         this.table = table;
         this.rowData = null;
@@ -48,6 +48,18 @@ public class EditTableDataModel extends AbstractTableModel {
         this.rowKey = rowKey;
         this.filterModel = filterModel;
         refreshData(skip);
+        //get 
+        
+    }
+    
+    //load row from table
+    public EditTableDataModel(Table table,Integer skip)
+    {
+        this.table = table;
+        this.rowData = null;
+        this.skip = skip;
+        this.rowKey = rowKey;
+        this.filterModel = new FilterModel();
     }
 
     private void refreshData(int skip) {
@@ -58,15 +70,64 @@ public class EditTableDataModel extends AbstractTableModel {
             } else {
                 scan = new Scan(rowKey.getBytes());
             }
-
+            
+            
+            //jdk 1.6 not support string switch ~-~
             if (!filterModel.isEmpty()) {
-                SingleColumnValueFilter filter = new SingleColumnValueFilter(
+                //LESS, LESS_OR_EQUAL, EQUAL, NOT_EQUAL, GREATER_OR_EQUAL, GREATER
+                String op = filterModel.getCompareOP();
+                if(op.equals("EQUAL")) {
+                    SingleColumnValueFilter filter = new SingleColumnValueFilter(
                         filterModel.getFamily().getBytes(),
                         filterModel.getColumn().getBytes(),
                         CompareFilter.CompareOp.EQUAL,
                         filterModel.getValue().getBytes());
-                filter.setFilterIfMissing(true);
-                scan.setFilter(filter);
+                        filter.setFilterIfMissing(true);
+                        scan.setFilter(filter);
+                }else if(op.equals("LESS")) {
+                    SingleColumnValueFilter filter = new SingleColumnValueFilter(
+                        filterModel.getFamily().getBytes(),
+                        filterModel.getColumn().getBytes(),
+                        CompareFilter.CompareOp.LESS,
+                        filterModel.getValue().getBytes());
+                        filter.setFilterIfMissing(true);
+                        scan.setFilter(filter);
+                }else if(op.equals("LESS_OR_EQUAL")) {
+                    SingleColumnValueFilter filter = new SingleColumnValueFilter(
+                        filterModel.getFamily().getBytes(),
+                        filterModel.getColumn().getBytes(),
+                        CompareFilter.CompareOp.LESS_OR_EQUAL,
+                        filterModel.getValue().getBytes());
+                        filter.setFilterIfMissing(true);
+                        scan.setFilter(filter);
+                }else if(op.equals("NOT_EQUAL")) {
+                    SingleColumnValueFilter filter = new SingleColumnValueFilter(
+                        filterModel.getFamily().getBytes(),
+                        filterModel.getColumn().getBytes(),
+                        CompareFilter.CompareOp.NOT_EQUAL,
+                        filterModel.getValue().getBytes());
+                        filter.setFilterIfMissing(true);
+                        scan.setFilter(filter);
+                }else if(op.equals("GREATER_OR_EQUAL")) {
+                    SingleColumnValueFilter filter = new SingleColumnValueFilter(
+                        filterModel.getFamily().getBytes(),
+                        filterModel.getColumn().getBytes(),
+                        CompareFilter.CompareOp.GREATER_OR_EQUAL,
+                        filterModel.getValue().getBytes());
+                        filter.setFilterIfMissing(true);
+                        scan.setFilter(filter);
+                }else{
+                    SingleColumnValueFilter filter = new SingleColumnValueFilter(
+                        filterModel.getFamily().getBytes(),
+                        filterModel.getColumn().getBytes(),
+                        CompareFilter.CompareOp.GREATER,
+                        filterModel.getValue().getBytes());
+                        filter.setFilterIfMissing(true);
+                        scan.setFilter(filter);
+                }
+                
+                
+                
             }
 
             try {
@@ -111,22 +172,34 @@ public class EditTableDataModel extends AbstractTableModel {
         try {
             //load first,scan class have a limit setting????
             Scan scan = new Scan();
-            //if set the stop row,it return null.....
+            
             /*
-            ByteArrayOutputStream buf = new ByteArrayOutputStream();
-            DataOutputStream out = new DataOutputStream(buf);
-            out.writeInt(num);
-            byte[] stop = buf.toByteArray();
-            out.close();
-            buf.close();
-            scan.setStopRow(stop);
+            SingleColumnValueFilter filter = new SingleColumnValueFilter(
+                        filterModel.getFamily().getBytes(),
+                        filterModel.getColumn().getBytes(),
+                        CompareFilter.CompareOp.EQUAL,
+                        filterModel.getValue().getBytes());
+            
+            filter.setFilterIfMissing(true);
+            scan.setFilter(filter);
             */
+            Log log = Utils.getLog();
+            
             ResultScanner resultScanner = table.getHTable().getScanner(scan);
             while (num > 0) {
                 Result result = resultScanner.next();
+                
                 if (result != null) {
+                    
+                    //RowResult r = result.getRowResult();
+                    //alist.addElement(r.getRow().toString());
+                    
                     rowData = new RowData();
+                    //result.getRowResult();
+                    //load so many data,we need row name
+                    //log.info(result.getRowResult());
                     rowData.setRowKey(result.getRow());
+                    //rowData.
                     alist.addElement(rowData.getRowKeyString());
                     this.loadCount++;
                 }
