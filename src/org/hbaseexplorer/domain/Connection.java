@@ -4,11 +4,13 @@ import java.io.IOException;
 import java.io.Serializable;
 import java.util.ArrayList;
 
+import org.apache.commons.logging.Log;
 import org.apache.hadoop.conf.Configuration;
 import org.apache.hadoop.hbase.HBaseConfiguration;
 import org.apache.hadoop.hbase.HTableDescriptor;
 import org.apache.hadoop.hbase.MasterNotRunningException;
 import org.apache.hadoop.hbase.client.HBaseAdmin;
+import org.buddy.javatools.Utils;
 import org.hbaseexplorer.exception.ExplorerException;
 
 /**
@@ -41,7 +43,11 @@ public class Connection implements Serializable {
         try {
             tableList = new ArrayList<Table>();
             HTableDescriptor hTables[] = hbaseAdmin.listTables();
-
+            
+            Log log = Utils.getLog();
+            log.info("*****table");
+            log.info(hTables.length);
+            
             for(HTableDescriptor tableDescriptor : hTables) {
                 tableList.add(new Table(tableDescriptor, this));
             }

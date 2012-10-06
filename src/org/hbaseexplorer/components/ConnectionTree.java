@@ -66,25 +66,36 @@ public class ConnectionTree extends JTree {
 
 
     private void addConnectionToTree(Connection conn) {
+        
+        Log log = Utils.getLog();
+        
         DefaultTreeModel defTreeModel = (DefaultTreeModel)getModel();
 
         DefaultMutableTreeNode rootNode = (DefaultMutableTreeNode)getModel().getRoot();
 
         DefaultMutableTreeNode nameNode = new DefaultMutableTreeNode(conn.getName(), true);
+        
+        
         DefaultMutableTreeNode tablesNode = new DefaultMutableTreeNode("Tables", true);
-        DefaultMutableTreeNode confNode = new DefaultMutableTreeNode("Configuration", true);
-
+        
         nameNode.setUserObject(conn);
         nameNode.add(tablesNode);
-        nameNode.add(confNode);
-
+        
         for(Table mtable : conn.getTableList()) {
+            
+            //log.info(mtable);
+            
             DefaultMutableTreeNode tableNode = new DefaultMutableTreeNode(mtable.getName(), true);
             tablesNode.add(tableNode);
             tableNode.setUserObject(mtable);
         }
 
+        DefaultMutableTreeNode confNode = new DefaultMutableTreeNode("Tables Count:" + tablesNode.getChildCount(), true);
+        nameNode.add(confNode);
+
+        
         rootNode.add(nameNode);
+        
         defTreeModel.setRoot(rootNode);
 
         for(int i=0; i<getRowCount(); i++) {
