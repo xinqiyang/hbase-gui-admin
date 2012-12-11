@@ -16,7 +16,11 @@ import org.apache.hadoop.hbase.client.Scan;
 import org.apache.hadoop.hbase.client.Result;
 import org.apache.hadoop.hbase.client.ResultScanner;
 import org.apache.hadoop.hbase.filter.CompareFilter;
+import org.apache.hadoop.hbase.filter.FirstKeyOnlyFilter;
+import org.apache.hadoop.hbase.filter.QualifierFilter;
+import org.apache.hadoop.hbase.filter.RegexStringComparator;
 import org.apache.hadoop.hbase.filter.SingleColumnValueFilter;
+import org.buddy.javatools.ToolConfig;
 import org.buddy.javatools.Utils;
 import org.hbaseexplorer.domain.FilterModel;
 import org.hbaseexplorer.domain.HBTriplet;
@@ -62,12 +66,15 @@ public class EditTableDataModel extends AbstractTableModel {
         this.filterModel = new FilterModel();
     }
 
+    //refresh data from hbase
     private void refreshData(int skip) {
+        
         if (rowData == null) {
             Scan scan;
             if (rowKey == null) {
                 scan = new Scan();
             } else {
+                //have rowkey
                 scan = new Scan(rowKey.getBytes());
             }
             
@@ -117,6 +124,7 @@ public class EditTableDataModel extends AbstractTableModel {
                         filter.setFilterIfMissing(true);
                         scan.setFilter(filter);
                 }else{
+                    //
                     SingleColumnValueFilter filter = new SingleColumnValueFilter(
                         filterModel.getFamily().getBytes(),
                         filterModel.getColumn().getBytes(),
@@ -129,6 +137,33 @@ public class EditTableDataModel extends AbstractTableModel {
                 
                 
             }
+            
+            //set value filter
+            //@TODO: this set the filter from  config
+            if(ToolConfig.noDisplayQualifier != "") {
+                String [] familyAndQualifier = ToolConfig.noDisplayQualifier.split(",");
+                if(familyAndQualifier.length >0) {
+                    for(String one : familyAndQualifier) {
+                        String[] fq = one.split(":");
+                        
+                        Utils.getLog().info("F AND Q :" + fq[0] + "  :  " + fq[1]);
+                        
+                    }
+                    //add qualifier filter 
+                    //@TODO ADD FILTER FAILD
+                    
+                    /*
+                    QualifierFilter f = new QualifierFilter (CompareFilter.CompareOp.NOT_EQUAL,new RegexStringComparator("f*"));
+                                scan.setFilter(f);
+                        
+                    */              
+                }
+                
+            }else if(ToolConfig.onlyDisplayQualifier != "") {
+                
+            }else{
+                
+            }
 
             try {
                 ResultScanner resultScanner = table.getHTable().getScanner(scan);
@@ -136,7 +171,8 @@ public class EditTableDataModel extends AbstractTableModel {
                     resultScanner.next();
                     skip--;
                 }
-
+                
+                //when scan list ,all data have been store in the client.
                 Result result = resultScanner.next();
 
                 rowData = new RowData();
@@ -147,6 +183,13 @@ public class EditTableDataModel extends AbstractTableModel {
                     rowKey = rowData.getRowKeyString();
                     //get rows data
                     for (KeyValue kv : result.list()) {
+                        //add hbase get family and get qualifier and get value
+                        //if is in the filter then now display
+                        byte[] family = kv.getFamily();
+                        byte[] qualifier = kv.getQualifier();
+                        int valueLength = kv.getValueLength();
+                        byte[] value = kv.getValue();
+                        
                         rowData.add(new HBTriplet(kv.getFamily(), kv.getQualifier(), kv.getValue()));
                     }
                 }
@@ -172,18 +215,9 @@ public class EditTableDataModel extends AbstractTableModel {
         try {
             //load first,scan class have a limit setting????
             Scan scan = new Scan();
-            
-            /*
-            SingleColumnValueFilter filter = new SingleColumnValueFilter(
-                        filterModel.getFamily().getBytes(),
-                        filterModel.getColumn().getBytes(),
-                        CompareFilter.CompareOp.EQUAL,
-                        filterModel.getValue().getBytes());
-            
-            filter.setFilterIfMissing(true);
-            scan.setFilter(filter);
-            */
             Log log = Utils.getLog();
+            //set a filter only load a first column,means get row.
+            scan.setFilter(new FirstKeyOnlyFilter());
             
             ResultScanner resultScanner = table.getHTable().getScanner(scan);
             while (num > 0) {
@@ -191,11 +225,7 @@ public class EditTableDataModel extends AbstractTableModel {
                 
                 if (result != null) {
                     
-                    //RowResult r = result.getRowResult();
-                    //alist.addElement(r.getRow().toString());
-                    
                     rowData = new RowData();
-                    //result.getRowResult();
                     //load so many data,we need row name
                     //log.info(result.getRowResult());
                     rowData.setRowKey(result.getRow());

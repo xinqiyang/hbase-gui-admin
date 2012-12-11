@@ -2,6 +2,8 @@ package org.hbaseexplorer.components;
 
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
+import java.util.logging.Level;
+import java.util.logging.Logger;
 import javax.swing.JTree;
 import javax.swing.tree.DefaultMutableTreeNode;
 import javax.swing.tree.DefaultTreeModel;
@@ -23,7 +25,7 @@ public class ConnectionTree extends JTree {
 
     public ConnectionTree() {
         super();
-
+        
         // Double click handler
         addMouseListener(
             new MouseAdapter() {
@@ -42,12 +44,19 @@ public class ConnectionTree extends JTree {
                 }
             }
         );
+         
     }
 
-    public void createConnection(Configuration conf) {
-        Connection conn = new Connection(conf);
-        conn.connect();
-        addConnectionToTree(conn);
+    public void createConnection(Configuration conf)  {
+        if(conf != null) {
+            try {
+                Connection conn = new Connection(conf);
+                conn.connect();
+                addConnectionToTree(conn);
+            } catch (Exception ex) {
+                Logger.getLogger(ConnectionTree.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
     }
 
     //double click 
@@ -65,6 +74,7 @@ public class ConnectionTree extends JTree {
     }
 
 
+    //add table to list
     private void addConnectionToTree(Connection conn) {
         
         Log log = Utils.getLog();
@@ -73,6 +83,9 @@ public class ConnectionTree extends JTree {
 
         DefaultMutableTreeNode rootNode = (DefaultMutableTreeNode)getModel().getRoot();
 
+        //
+        log.debug(conn.getName());
+        
         DefaultMutableTreeNode nameNode = new DefaultMutableTreeNode(conn.getName(), true);
         
         

@@ -26,18 +26,18 @@ import org.apache.hadoop.conf.Configuration;
 import org.hbaseexplorer.components.ConnectionTree;
 import org.hbaseexplorer.components.DataTabPane;
 import org.buddy.javatools.BuddyFile;
+import org.buddy.javatools.Utils;
 import org.hbaseexplorer.domain.Query;
 
 /**
  * The application's main frame.
  */
-public class HBaseExplorerView extends FrameView {
+public final class HBaseExplorerView extends FrameView {
     
     private Configuration localconf;
 
     public HBaseExplorerView(SingleFrameApplication app) {
         super(app);
-
         initComponents();
 
         // status bar initialization - message timeout, idle icon and busy animation, etc
@@ -98,6 +98,7 @@ public class HBaseExplorerView extends FrameView {
         });
         
         newConnectionAction();
+        
     }
 
     @Action
@@ -187,11 +188,13 @@ public class HBaseExplorerView extends FrameView {
 
         javax.swing.ActionMap actionMap = org.jdesktop.application.Application.getInstance(org.hbaseexplorer.HBaseExplorerApp.class).getContext().getActionMap(HBaseExplorerView.class, this);
         jMenuItem2.setAction(actionMap.get("runQueryAction")); // NOI18N
+        jMenuItem2.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_R, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem2.setText(resourceMap.getString("jMenuItem2.text")); // NOI18N
         jMenuItem2.setName("jMenuItem2"); // NOI18N
         fileMenu.add(jMenuItem2);
 
         jMenuItem1.setAction(actionMap.get("newConnectionAction")); // NOI18N
+        jMenuItem1.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_N, java.awt.event.InputEvent.CTRL_MASK));
         jMenuItem1.setText(resourceMap.getString("jMenuItem1.text")); // NOI18N
         jMenuItem1.setName("jMenuItem1"); // NOI18N
         fileMenu.add(jMenuItem1);
@@ -200,6 +203,7 @@ public class HBaseExplorerView extends FrameView {
         fileMenu.add(jSeparator1);
 
         exitMenuItem.setAction(actionMap.get("quit")); // NOI18N
+        exitMenuItem.setAccelerator(javax.swing.KeyStroke.getKeyStroke(java.awt.event.KeyEvent.VK_Q, java.awt.event.InputEvent.CTRL_MASK));
         exitMenuItem.setName("exitMenuItem"); // NOI18N
         fileMenu.add(exitMenuItem);
 
@@ -286,22 +290,29 @@ public class HBaseExplorerView extends FrameView {
             Logger.getLogger(HBaseExplorerView.class.getName()).log(Level.SEVERE, null, ex);
         }
         
+        Utils.getLog().debug("config:" + strConfig);
         String zookeeper = JOptionPane.showInputDialog("HBase zookeeper", strConfig);
 
         TaskMonitor taskMonitor = new TaskMonitor(getApplication().getContext());
 
-
-        if (zookeeper != null && !zookeeper.isEmpty()) {
-            Configuration conf = new Configuration();
-            conf.set("hbase.zookeeper.quorum", zookeeper);
-            conf.set("hbase.client.retries.number", "1");
-            getTree().createConnection(conf);
-            getTree().setMainApp(this);
-            //@TODO:add by xinqiyang
-            //save it to file
+        Utils.getLog().error("ZK:" + zookeeper);
+        
+        if (zookeeper != null && !zookeeper.isEmpty() && zookeeper.length()>1) {
             try {
-                BuddyFile.write("hbasexplorerconfig.ini", zookeeper, false);
-            } catch (IOException ex) {
+                Configuration conf = new Configuration();
+                conf.set("hbase.zookeeper.quorum", zookeeper);
+                conf.set("hbase.client.retries.number", "1");
+                getTree().createConnection(conf);
+                getTree().setMainApp(this);
+                //@TODO:add by xinqiyang
+                //save it to file
+                try {
+                    BuddyFile.write("hbasexplorerconfig.ini", zookeeper, false);
+                } catch (IOException ex) {
+                    Logger.getLogger(HBaseExplorerView.class.getName()).log(Level.SEVERE, null, ex);
+                }
+
+            } catch (Exception ex) {
                 Logger.getLogger(HBaseExplorerView.class.getName()).log(Level.SEVERE, null, ex);
             }
 
@@ -316,6 +327,8 @@ public class HBaseExplorerView extends FrameView {
         return (DataTabPane) tabPane;
     }
 
+    //@TODO: Need update
+    //do run query 
     @Action
     public void runQueryAction() throws IOException {
 

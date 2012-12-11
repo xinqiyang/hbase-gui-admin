@@ -3,6 +3,7 @@ package org.hbaseexplorer.domain;
 import java.io.UnsupportedEncodingException;
 import java.util.logging.Level;
 import java.util.logging.Logger;
+import org.buddy.javatools.Utils;
 
 /**
  *
@@ -17,6 +18,7 @@ public class HBTriplet {
     public HBTriplet() {
     }
 
+    //
     public HBTriplet(byte[] family, byte[] qualifier, byte[] value) {
         this.qualifier = qualifier;
         this.value = value;
@@ -61,7 +63,20 @@ public class HBTriplet {
     }
 
     public static String byte2String(byte[] data) throws UnsupportedEncodingException {
-        return new String(data,"UTF-8");
+        //@TODO:update change the string.
+        //return Utils.isPrintableData(data, 100);
+        String ret = "";
+        if(Utils.isPrintableData(data, 100)) {
+            ret = new String(data,"UTF-8");
+        }else{
+            //
+            //ret = Utils.getHexStringBase(data, 10, false);
+            //ret = Utils.getHexStringBase(data, 10, false);
+            //ret = Utils.toStringHex(data.toString());
+            ret = String.valueOf(Utils.getLong(data, false));
+        }
+        return ret;
+        
     }
 
     public boolean isChanged() {
@@ -81,4 +96,6 @@ public class HBTriplet {
             return "";
         }
     }
+    
+    
 }
