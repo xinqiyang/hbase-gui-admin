@@ -15,6 +15,7 @@ import java.awt.Component;
 import java.awt.event.MouseAdapter;
 import java.awt.event.MouseEvent;
 import java.io.IOException;
+import javax.swing.DefaultListModel;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
 import javax.swing.JTable;
@@ -24,8 +25,11 @@ import javax.swing.table.DefaultTableColumnModel;
 import javax.swing.table.TableCellRenderer;
 import javax.swing.table.TableColumn;
 import javax.swing.table.TableColumnModel;
+import org.apache.commons.logging.Log;
 import org.apache.hadoop.hbase.client.Delete;
 import org.apache.hadoop.hbase.client.Put;
+import org.buddy.javatools.ToolConfig;
+import org.buddy.javatools.Utils;
 import org.hbaseexplorer.HBaseExplorerApp;
 import org.hbaseexplorer.components.renderers.EditTableCellRenderer;
 import org.hbaseexplorer.datamodels.EditTableDataModel;
@@ -35,7 +39,6 @@ import org.hbaseexplorer.domain.RowData;
 import org.hbaseexplorer.domain.Table;
 import org.hbaseexplorer.exception.ExplorerException;
 import org.jdesktop.application.Action;
-
 /**
  *
  * @author zaharije
@@ -55,20 +58,33 @@ public class EditTableData extends javax.swing.JPanel {
         this.table = table;
         this.filterModel = new FilterModel();
 
+        Log log = Utils.getLog();
         //tableData.setDefaultRenderer(String.class, new EditTableCellRenderer());
-
+        long start =  System.currentTimeMillis();
         showData(0);
-        
+        log.info("first show Data" + (System.currentTimeMillis() - start));
         //add by xinqiyang
         //load Rows
-        loadRows(5000);
-        setjListRowListener();
-        jLabel1.setText("   ROWS TATAL:"+String.valueOf(this.Total));
+        long startLoad =  System.currentTimeMillis();
+        //get row count then load rows
+        //
+        if(ToolConfig.loadAllRow) {
+            loadRows(ToolConfig.maxLoadRow.intValue());
+            setjListRowListener();
+            jLabel1.setText("   ROWS TATAL:"+String.valueOf(this.Total));
+            log.info("start load show Data" + (System.currentTimeMillis() - startLoad));
+        }else{
+            jListRow.setVisible(false);
+            //set panel disable 
+            jScrollPane2.setVisible(false);
+            log.info("set jListRow disable");
+            
+        }
     }
     
     private void loadRows(int num)
     {
-        EditTableDataModel model = new EditTableDataModel(table, num, "", filterModel);
+        EditTableDataModel model = new EditTableDataModel(table, num);
         jListRow.setModel(model.getRowData(num));
         this.Total = model.getRowsTotal();
         //jLabel1.setText(String.valueOf(model.getRowsTotal()));
@@ -95,15 +111,25 @@ public class EditTableData extends javax.swing.JPanel {
     }
 
     //get row from list
+    //when click or set a row find the column family and columns.
     private void showData(int skip) {
+        
         EditTableDataModel model = new EditTableDataModel(table, skip, rowKey, filterModel);
+        
         autoResizeColWidth(tableData, model);
 
+        Log log = Utils.getLog();
+        long start =  System.currentTimeMillis();
         TableColumnModel columnModel = tableData.getColumnModel();
+        
+        //table data
+        //
         for (int i = 0; i < tableData.getColumnCount(); i++) {
+            //edit
             columnModel.getColumn(i).setCellRenderer(new EditTableCellRenderer());
         }
-
+        
+        log.info("end time:" + (System.currentTimeMillis() - start));
         rowKey = model.getRowKey();
         //set the first rowkey
         txtFieldRowKey.setText(rowKey);
@@ -111,7 +137,8 @@ public class EditTableData extends javax.swing.JPanel {
         //get all Row keys.
         //allRowKey = model.getRowKey();
         if(skip == 0){
-            
+           //if is get single row
+           
         }
     }
     
@@ -186,6 +213,7 @@ public class EditTableData extends javax.swing.JPanel {
         txtFieldRowKey = new javax.swing.JTextField();
         btnGo = new javax.swing.JButton();
         jToolBar2 = new javax.swing.JToolBar();
+        jButton3 = new javax.swing.JButton();
         jButton1 = new javax.swing.JButton();
         btnAddColumn = new javax.swing.JButton();
         jButton2 = new javax.swing.JButton();
@@ -238,6 +266,18 @@ public class EditTableData extends javax.swing.JPanel {
 
         jToolBar2.setRollover(true);
         jToolBar2.setName("jToolBar2"); // NOI18N
+
+        jButton3.setText(resourceMap.getString("jButton3.text")); // NOI18N
+        jButton3.setFocusable(false);
+        jButton3.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        jButton3.setName("jButton3"); // NOI18N
+        jButton3.setVerticalTextPosition(javax.swing.SwingConstants.BOTTOM);
+        jButton3.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                jButton3MouseClicked(evt);
+            }
+        });
+        jToolBar2.add(jButton3);
 
         jButton1.setAction(actionMap.get("btnSaveClickAction")); // NOI18N
         jButton1.setText(resourceMap.getString("jButton1.text")); // NOI18N
@@ -353,6 +393,21 @@ public class EditTableData extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    //reflash the rows
+    private void jButton3MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButton3MouseClicked
+        // TODO add your handling code here:
+        if(ToolConfig.loadAllRow){
+            //load all data
+            DefaultListModel alist = new DefaultListModel();
+            //clear
+            jListRow.setModel(alist);
+            
+            loadRows(ToolConfig.maxLoadRow.intValue());
+            setjListRowListener();
+            //Utils.getLog().info("list ok");
+        }
+    }//GEN-LAST:event_jButton3MouseClicked
+
     @Action
     public void fristBtnClickAction() {
         rowKey = null;
@@ -430,6 +485,7 @@ public class EditTableData extends javax.swing.JPanel {
 
     @Action
     public void btnGoClickAction() {
+        //get row key then load data
         rowKey = txtFieldRowKey.getText();
         showData(0);
     }
@@ -473,6 +529,7 @@ public class EditTableData extends javax.swing.JPanel {
     private javax.swing.JCheckBox checkBoxFilter;
     private javax.swing.JButton jButton1;
     private javax.swing.JButton jButton2;
+    private javax.swing.JButton jButton3;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JList jListRow;
     private javax.swing.JScrollPane jScrollPane1;
