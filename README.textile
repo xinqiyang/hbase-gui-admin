@@ -16,7 +16,7 @@ add log to debug
 
 h2. Licnese
 
-MIT License (see "LICENSE":http://github.com/zaharije/HBaseXplorer/blob/master/LICENSE)
+MIT License (see "LICENSE":http://opensource.org/licenses/mit-license.php)
 
 h2. Install
 
